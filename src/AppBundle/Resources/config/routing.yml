@@ -1,0 +1,4 @@
+app_insecte:
+    resource: "@AppBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+

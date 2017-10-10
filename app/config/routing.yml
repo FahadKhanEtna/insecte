@@ -1,0 +1,16 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+insecte:
+    resource: "@AppBundle/Resources/config/routing.yml"
+
+fos_user:
+    resource: "@FOSUserBundle/Resources/config/routing/all.xml"
+
+root:
+    path: /
+    defaults:
+        _controller: FrameworkBundle:Redirect:urlRedirect
+        path: /login
+        permanent: true

@@ -1,0 +1,27 @@
+AppBundle\Entity\User:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        age:
+            type: integer
+        famille:
+            type: string
+            length: 255
+        race:
+            type: string
+            length: 255
+        nourriture:
+            type: string
+            length: 255
+    manyToMany:
+        amis:
+            targetEntity: User
+            cascade: [ persist ]
+    lifecycleCallbacks: {  }

@@ -1,0 +1,69 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div>
+        {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+            {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
+            <a href="{{ path('fos_user_security_logout') }}">
+                {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+            </a>
+        {% else %}
+            <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+        {% endif %}
+    </div>
+
+    <h1>Insecte en ligne</h1>
+    <table border="1">
+        <tbody>
+            <tr style="background-color: yellow">
+                <td>{{ app.user.username }}</a></td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('user_show', { 'id': app.user.id }) }}">Mon compte</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <h1>Liste d'insectes</h1>
+    <table border="1">
+        <tbody>
+        {% for ami in non_amis %}
+            <tr style="background-color: deepskyblue">
+                <td>{{ ami.username }}</a></td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('user_detailsInsecte', { 'id': ami.id }) }}">Détails</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+    <h1>Mes amis</h1>
+    <table border="1">
+        <tbody>
+        {% for ami in amis %}
+            <tr style="background-color: green">
+                <td>{{ ami.username }}</a></td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('user_detailsAmis', { 'id': ami.id }) }}">Détails</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

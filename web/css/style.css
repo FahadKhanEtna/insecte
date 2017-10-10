@@ -1,0 +1,24 @@
+label
+{
+    float: left;
+    width: 10%;
+    margin-bottom: 10px;
+}
+
+input
+{
+    display: block;
+    width: 15%;
+    margin-bottom: 10px;
+}
+
+#remember_me
+{
+    width: 0%;
+    float: left;
+}
+
+#souvenir
+{
+    width:9% !important;
+}

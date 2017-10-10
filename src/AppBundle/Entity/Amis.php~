@@ -1,0 +1,170 @@
+<?php
+
+namespace AppBundle\Entity;
+
+/**
+ * Amis
+ */
+class Amis
+{
+    /**
+     * @var int
+     */
+    private $id;
+
+    /**
+     * @var string
+     */
+    private $username;
+
+    /**
+     * @var int
+     */
+    private $age;
+
+    /**
+     * @var string
+     */
+    private $famille;
+
+    /**
+     * @var string
+     */
+    private $race;
+
+    /**
+     * @var string
+     */
+    private $nourriture;
+
+
+    /**
+     * Get id
+     *
+     * @return int
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set username
+     *
+     * @param string $username
+     *
+     * @return Amis
+     */
+    public function setUsername($username)
+    {
+        $this->username = $username;
+
+        return $this;
+    }
+
+    /**
+     * Get username
+     *
+     * @return string
+     */
+    public function getUsername()
+    {
+        return $this->username;
+    }
+
+    /**
+     * Set age
+     *
+     * @param integer $age
+     *
+     * @return Amis
+     */
+    public function setAge($age)
+    {
+        $this->age = $age;
+
+        return $this;
+    }
+
+    /**
+     * Get age
+     *
+     * @return int
+     */
+    public function getAge()
+    {
+        return $this->age;
+    }
+
+    /**
+     * Set famille
+     *
+     * @param string $famille
+     *
+     * @return Amis
+     */
+    public function setFamille($famille)
+    {
+        $this->famille = $famille;
+
+        return $this;
+    }
+
+    /**
+     * Get famille
+     *
+     * @return string
+     */
+    public function getFamille()
+    {
+        return $this->famille;
+    }
+
+    /**
+     * Set race
+     *
+     * @param string $race
+     *
+     * @return Amis
+     */
+    public function setRace($race)
+    {
+        $this->race = $race;
+
+        return $this;
+    }
+
+    /**
+     * Get race
+     *
+     * @return string
+     */
+    public function getRace()
+    {
+        return $this->race;
+    }
+
+    /**
+     * Set nourriture
+     *
+     * @param string $nourriture
+     *
+     * @return Amis
+     */
+    public function setNourriture($nourriture)
+    {
+        $this->nourriture = $nourriture;
+
+        return $this;
+    }
+
+    /**
+     * Get nourriture
+     *
+     * @return string
+     */
+    public function getNourriture()
+    {
+        return $this->nourriture;
+    }
+}
